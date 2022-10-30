@@ -1,0 +1,132 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<html>
+
+<h2>
+    <center>먼저 설정해주세요
+</h2>
+<label class="ment">
+    <center><span style="font-size: 15pt">닉네임
+</label>
+<form action="/locationSelect" method="get" id="nicknameForm">
+  <input type="text" size="15pt" name="nickname"></input>
+</form>
+<br> <br>
+<label>
+    <center><span style="font-size: 15pt">내차는?
+            <select class="select">
+                <option>-선택-</option>
+                <option>테슬라</option>
+                <option>아이오닉EV</option>
+                <option>BMW i3</option>
+                <option>소울EV</option>
+                <option>레이EV</option>
+                <option>스파크EV</option>
+                <option>볼트EV</option>
+                <option>SM3 Z.E</option>
+                <option>닛산리프</option>
+            </select>
+            <br><br>
+            <label><span style="font-size: 15pt">내가 사는 곳은?</t>&nbsp;
+                    <select class="select">
+                        <option>-선택-</option>
+                        <option>서울</option>
+                        <option>경기</option>
+                        <option>인천</option>
+                        <option>부산</option>
+                        <option>울산</option>
+                        <option>대구</option>
+                        <option>대전</option>
+                        <option>광주</option>
+                        <option>세종</option>
+                        <option>경북</option>
+                        <option>경남</option>
+                        <option>충북</option>
+                        <option>충남</option>
+                        <option>전북</option>
+                        <option>전남</option>
+                        <option>강원</option>
+                        <option>제주</option>
+                    </select>
+                    <br>
+                    <br><br>
+                    <hr color="Wheat" size="10pt">
+                    </hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="styled" type="submit" form="nicknameForm">확인
+                    </button>
+                    <button class="color" type="button">취소
+                    </button>
+
+</html>
+<script>
+    $(document).ready(function () {
+        var nickname = $("#nickname").val();
+        console.log(nickname + "aa")
+
+    });
+    function search(nickname) {
+        console.log("gg")
+
+        location.href = "location_select.html?nickname=" + nickname;
+    }
+</script>
+<style>
+    .styled {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 10pt;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: green;
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .2) 30%,
+        rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+            inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .styled:hover {
+        background-color: DarkGreen;
+    }
+
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+            inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .color {
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 10pt;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background-color: #DF0101;
+        rgba(0, 0, 0, .2),
+        rgba(0, 0, 0, .2) 30%,
+        rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+            inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .color:hover {
+        background-color: Firebrick;
+    }
+
+    .color:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+            inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .select {
+        font-size: 15pt;
+    }
+
+    .ment {
+        border-color: black;
+    }
+</style>

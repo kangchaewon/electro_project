@@ -1,0 +1,76 @@
+<html>
+    <header>
+        <h1>충전기 찾기</h1>
+          </header>
+          <body>
+            <br>
+          <label class="ment">서울시에서 <%=nickname%> 님의 테슬라의 충전이 가능한 곳
+            <button class="button" type="button" onclick="location.href='main.html'">다른 장소로 변경하기</button>
+            <br>
+            <br>
+            <hr color="Wheat" size="5pt"></hr>
+            <br>
+            <label class="text">강남세브란스 병원<button class="jim">찜하기</button><button class="map">지도보기</button><br>
+              서울시 강남구 언주로 111</label> 
+           <br>
+            <br>
+            <button class="rapid" type="button" onclick="location.href='rapid.html'">급속 </button>
+            <button class="slow" type="button" onclick="location.href='slow.html'"> 완속 </button>
+            </body>
+</html>
+<script>
+  function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+</script>
+<style>
+    .ment{
+  font-size: 15pt;
+}
+.button{
+  float: right;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 15pt;
+  border-color:gray;
+}
+.text{
+  font-size:13pt;
+}
+.jim{
+  float: right;
+  background-color:#FF0040;
+  border-color:#FF0040;
+  border-radius: 15pt;
+  font-size: 13pt;
+}
+.map{
+  float:right;
+  background-color: LimeGreen;
+  border-radius: 15pt;
+  font-size:13pt;
+  border-color: LimeGreen;
+}
+.rapid{
+  font-size: 13pt;
+  background-color: gold;
+  border-radius: 15pt;
+  border-color: gold;
+}
+.slow{
+  font-size: 13pt;
+  background-color: GreenYellow;
+  border-radius: 15pt;
+  border-color: GreenYellow;
+}
+
+</style>
