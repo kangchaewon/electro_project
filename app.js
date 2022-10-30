@@ -10,6 +10,12 @@ var finalRouter = require('./routes/final');
 var cancelRouter = require('./routes/cancel');
 var rapidRouter = require('./routes/rapid');
 var slowRouter = require('./routes/slow');
+var slow1Router = require('./routes/slow1');
+var rapid1Router = require('./routes/rapid1');
+var rapid2Router = require('./routes/rapid2');
+var final1Router = require('./routes/final1');
+var final2Router = require('./routes/final2');
+
 
 var app = express();
 
@@ -29,6 +35,11 @@ app.use('/final', finalRouter);
 app.use('/cancel', cancelRouter);
 app.use('/rapid', rapidRouter);
 app.use('/slow', slowRouter);
+app.use('/rapid1', rapid1Router);
+app.use('/rapid2', rapid2Router);
+app.use('/slow1', slow1Router);
+app.use('/final1', final1Router);
+app.use('/final2', final2Router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
