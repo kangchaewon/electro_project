@@ -1,0 +1,51 @@
+<html>
+    <h2><center>예약확인</h2>
+    <label class="explain"><center>만약 예약한 장소가 기억이 안 난다면 사용해주세요!</label><br><br>
+        <hr color="Wheat" size="5pt"><br><br>
+    <label class="ment"><center>닉네임을 입력해주세요</label>
+    <input id='name' onkeyup='find()'></input>
+    <br><br>
+    <div id='result1'></div><br>
+    <div id='result2'></div><br>
+    <div id='result3'></div><br>
+    <button class="home" onclick="location.href='main'">메인으로 가기</button>
+</html>
+<style>
+    .ment{
+        font-size: medium;
+    }
+    .explain{
+        font-size: small;
+    }
+    .home{
+        background-color: powderblue;
+        border-color: powderblue;
+        border-radius: 10pt;
+    }
+</style>
+<script> 
+    var data = new Object();
+    var dataArray = new Array();
+    
+    data={}
+    data.nickname = "강반다"
+    data.location = "강남세브란스병원"
+    data.time = "11:00~11:30"
+    dataArray.push(data);
+    data={}
+    data.nickname = "강채원"
+    data.location = "LH서울지사"
+    data.time ="11:00~11:30"
+    dataArray.push(data);
+    function find() {
+        const name= document.getElementById('name').value;
+        var real_name=new String(name);
+        for(var i=0;i<dataArray.length;i++){
+            if(dataArray[i].nickname==real_name){
+                document.getElementById("result1").innerText = dataArray[i].nickname+"님의 예약 현황입니다.";
+                document.getElementById("result2").innerText = "예약한 위치는 "+dataArray[i].location;
+                document.getElementById("result3").innerText = "예약한 시간은 "+dataArray[i].time;
+            }
+        }
+    }
+</script>

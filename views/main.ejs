@@ -1,31 +1,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html>
+    <h1><center> 내 차 충전기 찾아줘!</h1>
+        <hr color="Wheat" size="5pt"></hr>
+        <h2>
+            <center>먼저 설정해주세요
+        </h2>
+        
+        <br><button class="check" onclick="location.href='check'">예약확인</button>
+        <label class="ment"><form action="/locationSelect" method="get" id="nicknameForm">
+        <br><br><center><span style="font-size: 15pt">닉네임</span>
+            
+                <input type="text" size="15pt" name="nickname"></input>
+            </form>
+              
+        </label>
 
-<h2>
-    <center>먼저 설정해주세요
-</h2>
-<label class="ment">
-    <center><span style="font-size: 15pt">닉네임
-</label><form action="/locationSelect" method="get" id="nicknameForm">
-  <input type="text" size="15pt" name="nickname"></input>
-</form>
-<br>
+<br><br>
 <label>
     <center><span style="font-size: 15pt">내차는?
             <select class="select">
-                <option>-선택-</option>
-                <option>테슬라</option>
-                <option>아이오닉EV</option>
-                <option>BMW i3</option>
-                <option>소울EV</option>
-                <option>레이EV</option>
-                <option>스파크EV</option>
-                <option>볼트EV</option>
-                <option>SM3 Z.E</option>
-                <option>닛산리프</option>
+                <option value="">-선택-</option>
+                <option value="테슬라">테슬라</option>
+                <option value="아이오닉">아이오닉EV</option>
+                <option value="BMW">BMW i3</option>
+                <option value="소울">소울EV</option>
+                <option value="레이">레이EV</option>
+                <option value="스파크">스파크EV</option>
+                <option value="볼트">볼트EV</option>
+                <option value="SM3">SM3 Z.E</option>
+                <option value="닛산리프">닛산리프</option>
             </select>
             <br><br>
-            <label><span style="font-size: 15pt">내가 사는 곳은?</span>&nbsp;
+            <label><span style="font-size: 15pt">어디 살아요?
                     <select class="select">
                         <option>-선택-</option>
                         <option>서울</option>
@@ -54,18 +60,18 @@
                     </button>
                     <button class="color" type="button">취소
                     </button>
-
+                </form>
 </html>
 <script>
     $(document).ready(function () {
         var nickname = $("#nickname").val();
         console.log(nickname + "aa")
 
-    });
+    }); 
     function search(nickname) {
         console.log("gg")
 
-        location.href = "location_select.html?nickname=" + nickname;
+        location.href = "location_select.html?nickname=" + nickname ;
     }
 </script>
 <style>
@@ -127,5 +133,12 @@
 
     .ment {
         border-color: black;
+    }
+    
+    .check {
+        border-color: salmon;
+        background-color: salmon;
+        border-radius: 10pt;
+        float: right;
     }
 </style>

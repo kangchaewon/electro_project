@@ -15,6 +15,7 @@ var rapid1Router = require('./routes/rapid1');
 var rapid2Router = require('./routes/rapid2');
 var final1Router = require('./routes/final1');
 var final2Router = require('./routes/final2');
+var checkRouter = require('./routes/check');
 
 
 var app = express();
@@ -40,6 +41,7 @@ app.use('/rapid2', rapid2Router);
 app.use('/slow1', slow1Router);
 app.use('/final1', final1Router);
 app.use('/final2', final2Router);
+app.use('/check', checkRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
